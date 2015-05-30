@@ -1,0 +1,72 @@
+/**
+ * Object
+ * DATE SELECTOR
+ */
+
+.ds {
+  height: 60px;
+  overflow-y: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.ds__items {
+  display: inline-block;
+  position: relative;
+}
+
+.ds__item {
+  width: 50px;
+  display: inline-block;
+  text-align: center;
+
+  a {
+    display: block;
+    color: $white;
+  }
+}
+
+.ds__title {
+  margin-bottom: 6px;
+}
+
+.ds__bubble {
+  width: 24px;
+  height: 24px;
+  margin: 0 auto;
+
+  position: relative;
+
+  background-color: transparent;
+  border-radius: 12px;
+
+  .ds__bubble-inner {
+    width: 8px;
+    height: 8px;
+
+    position: absolute;
+    top: 8px;
+    left: 8px;
+
+    background-color: $white;
+    border-radius: 4px;
+  }
+
+  &.ds__bubble--selected {
+    background-color: $white;
+
+    .ds__bubble-inner {
+      background-color: #002c5f;
+    }
+  }
+}
+
+.ds__line-through {
+  height: 1px;
+  margin: 0 24px;
+
+  position: relative;
+  top: 38px;
+
+  background-color: #4cbbe4;
+}

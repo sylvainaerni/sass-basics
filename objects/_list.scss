@@ -1,0 +1,48 @@
+/**
+ * Object
+ * LIST
+ */
+
+// Default list element
+// Remove any list style
+.list {
+  margin: 0;
+  padding-left: 0;
+
+  list-style: none;
+}
+
+
+// List of inline elements
+// Require spaceless HTML
+.list--inline,
+%list--inline {
+  line-height: 0;
+
+  > li {
+    display: inline-block;
+    vertical-align: top;
+
+    > * {
+      line-height: $base-line-height;
+    }
+  }
+
+  // Add space between elements
+  &.list--spaced {
+    > li + li {
+      margin-left: $half-spacing-unit;
+    }
+  }
+}
+
+
+// List of stacked elements
+.list--stacked {
+  // Add space between elements
+  &.list--spaced {
+    > li + li {
+      margin-top: $half-spacing-unit;
+    }
+  }
+}

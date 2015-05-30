@@ -1,0 +1,55 @@
+/**
+* Object
+* BOX
+*/
+
+.box {
+  margin: 0; // Reset UEFA default style
+}
+
+.box--default {
+  color: $black;
+
+  background-color: $gray-lighter;
+}
+
+.box--highlighted {
+  color: $white;
+
+  background-color: $brand-color;
+}
+
+.box--faded {
+  color: $white;
+
+  background-color: $brand-faded;
+}
+
+.box--primary {
+    background-color: $link-color;
+}
+
+.box--bright {
+  color: $black;
+
+  background-color: $white;
+}
+
+.box--dark {
+  color: $white;
+
+  background-color: $black;
+}
+
+.box--overlay {
+  color: $white;
+
+  background-color: $gray-darker;
+  background-color: transparentize($black, .05);
+}
+
+.box--alt {
+  color: $brand-color;
+
+  background-color: #F3F7FF;
+}

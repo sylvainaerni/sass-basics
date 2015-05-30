@@ -1,0 +1,90 @@
+/**
+ * Helper
+ * POSITIONING
+ */
+
+.vertical-align,
+%vertical-align {
+  position: relative;
+  top: 50%;
+
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+
+  .ie8 & {
+    top: auto;
+  }
+}
+
+.relative-parent {
+  position: relative;
+}
+
+.tt,
+.ttl,
+.ttr,
+.ttw,
+.tr,
+.tb,
+.tbl,
+.tbr,
+.tbw,
+.tl,
+.tw {
+  position: absolute !important;
+  z-index: 1;
+
+  &.mobile {
+      position: fixed !important;
+  }
+}
+
+.tt {
+  top: 0;
+}
+  .ttl {
+    top: 0;
+    left: 0;
+  }
+  .ttr {
+    top: 0;
+    right: 0;
+  }
+  .ttw {
+    left: 0;
+    top: 0;
+    right: 0;
+  }
+
+.tr {
+  right: 0;
+}
+
+.tb {
+  bottom: 0;
+}
+  .tbl {
+    bottom: 0;
+    left: 0;
+  }
+  .tbr {
+    bottom: 0;
+    right: 0;
+  }
+  .tbw {
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+.tl {
+  left: 0;
+}
+
+.tw {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}

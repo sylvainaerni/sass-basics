@@ -1,0 +1,155 @@
+/**
+ * Base
+ * FORMS
+ */
+
+/**
+ * Basic form elements
+ */
+
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="datetime"],
+input[type="time"],
+input[type="number"],
+input[type="color"],
+input[type="file"],
+select,
+textarea {
+  display: block;
+  width: 100%;
+  padding: $half-spacing-unit;
+
+  color: $text-color;
+  font-size: inherit;
+  font-family: inherit;
+
+  border: 1px solid $gray-darker;
+  border: 1px solid rgba(0,0,0,.2);
+  background-color: white;
+  border-radius: 3px;
+
+  &.has-error {
+    border-color: $error-color;
+  }
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline-block;
+  vertical-align: text-top;
+
+  label & {
+    margin-right: $half-spacing-unit;
+  }
+}
+
+select {
+  height: 38px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+label {
+  display: block;
+  cursor: pointer;
+
+  &.has-error {
+    color: $error-color;
+  }
+}
+
+// Yup, that’s a shame
+// This is caused by UEFA header using fieldsets without classes
+.fieldset {
+  padding: $base-spacing-unit * 1.5;
+
+  border: 1px solid $gray-lighter;
+  border: 1px solid rgba(255,255,255,.3);
+
+  legend {
+    padding: 0 $half-spacing-unit;
+
+    text-align: center;
+    font-weight: bold;
+  }
+}
+
+
+/**
+ * Forms layout
+ */
+
+.field {
+  @extend %as-table;
+
+  ~ .field {
+    margin-top: $half-spacing-unit;
+  }
+}
+  .field--required {
+    position: relative;
+
+    &::after {
+      content: '*';
+      display: block;
+      margin-left: $quarter-spacing-unit;
+
+      @include font-size(20px);
+      line-height: 45px;
+
+      position: absolute;
+      top: 0;
+      left: 100%;
+    }
+  }
+
+.field__label {
+  @extend %as-table__cell;
+
+  width: 25%;
+  margin-bottom: $quarter-spacing-unit;
+}
+
+.field__control {
+  @extend %as-table__cell;
+
+  width: 75%;
+  padding-left: $half-spacing-unit;
+}
+
+.field__help {
+  margin-top: $quarter-spacing-unit;
+
+  @include font-size(12px);
+}
+
+.label--inline {
+  display: inline-block;
+  padding-top: $half-spacing-unit;
+  padding-bottom: $half-spacing-unit;
+
+  ~ .label--inline {
+    margin-left: $base-spacing-unit;
+  }
+}
+
+input[type="text"] {
+    &.field_2 {
+        display: inline-block;
+        width: 40px;
+    }
+
+    &.field_4 {
+        display: inline-block;
+        width: 80px;
+    }
+}

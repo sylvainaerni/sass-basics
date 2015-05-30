@@ -1,0 +1,304 @@
+/**
+* Object
+* BUTTON
+*/
+
+.btn {
+  display: inline-block;
+  padding: 0;
+  overflow: hidden;
+
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  border: 0;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 0;
+
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+  }
+
+  &[disabled] {
+    opacity: .5;
+    cursor: not-allowed;
+  }
+}
+
+.btn--block {
+  display: block;
+  width: 100%;
+}
+
+
+/**
+ * Sizes
+ */
+
+.btn--medium {
+  padding: $half-spacing-unit;
+}
+
+.btn--large {
+  padding: $base-spacing-unit;
+  @include font-size(20px);
+}
+
+
+/**
+ * Colors
+ */
+
+.btn--default {
+  border-radius: 2px;
+
+  &,
+  &:link,
+  &:visited {
+    color: $text-color;
+    background-color: $gray;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $text-color;
+    background-color: $gray-light;
+  }
+}
+
+.btn--primary {
+  text-transform: uppercase;
+
+  border-radius: 2px;
+
+  &,
+  &:link,
+  &:visited {
+    color: $white;
+    background-color: $link-color;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: lighten($link-color, 10%);
+  }
+}
+
+.btn--secondary {
+  border-radius: 2px;
+
+  &,
+  &:link,
+  &:visited {
+    color: $white;
+    background-color: $brand-color;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: lighten($brand-color, 10%);
+  }
+}
+
+
+/**
+ * Tabs
+ */
+
+// Simple, plain tabs
+.btn--plain-tab {
+  display: inline-block;
+  padding: $quarter-spacing-unit $half-spacing-unit;
+
+  @include font-size(12px);
+  font-weight: bold;
+  text-decoration: none;
+
+  &,
+  &:link,
+  &:visited {
+    background-color: white;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $gray-light;
+  }
+
+  &.active {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white;
+      background-color: $brand-color;
+    }
+  }
+}
+
+// Alternative tabs
+.btn--tab {
+  display: inline-block;
+
+  @include font-size(16px);
+
+  &.active {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      padding-bottom: $half-spacing-unit - 4px;
+      border-bottom: 4px solid;
+    }
+  }
+}
+
+  .btn--tab--light {
+    padding: $half-spacing-unit $base-spacing-unit;
+
+    &,
+    &:link,
+    &:visited {
+      color: $white;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $brand-faded;
+    }
+
+    &.active {
+      &,
+      &:hover,
+      &:focus,
+      &:active {
+        border-bottom-color: $white;
+      }
+    }
+  }
+
+  .btn--tab--dark {
+    padding: $half-spacing-unit 0;
+
+    &,
+    &:link,
+    &:visited {
+      color: $gray-dark;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $gray-lighter;
+    }
+
+    &.active {
+      &,
+      &:hover,
+      &:focus,
+      &:active {
+        color: $brand-color;
+        border-bottom-color: $brand-color;
+      }
+    }
+  }
+
+
+// Social
+.btn--social {
+  display: block;
+  padding: $half-spacing-unit;
+
+  background-color: white;
+  border-radius: 2px;
+}
+
+// Close
+.btn--close {
+  .box--dark & .icon,
+  .box--overlay & .icon {
+    fill: $white;
+  }
+}
+
+// Sign up
+.btn--oauth {
+  position: relative;
+
+  text-indent: 49px;
+
+  border-radius: 2px;
+
+  &,
+  &:link,
+  &:visited {
+    color: $white;
+  }
+}
+
+.btn--oauth--facebook {
+  background-color: $facebook-color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: lighten($facebook-color,6%);
+  }
+}
+.btn--oauth--google {
+  background-color: $google-color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: lighten($google-color,6%);
+  }
+}
+.btn--oauth--windows {
+  background-color: $windows-color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: lighten($windows-color,6%);
+  }
+}
+.btn--oauth--yahoo {
+  background-color: $yahoo-color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: lighten($yahoo-color,6%);
+  }
+}
+
+.btn--oauth__icon {
+  display: block;
+  padding: 7px $half-spacing-unit;
+
+  text-indent: 0;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  background-color: rgba(255,255,255,.15);
+
+  .icon {
+    fill: $white;
+  }
+}

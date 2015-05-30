@@ -1,0 +1,37 @@
+/**
+* Object
+* ICON
+*/
+
+.icon {
+  display: inline-block;
+  vertical-align: text-bottom;
+
+  line-height: 1;
+
+  .btn--primary & {
+    fill: $white;
+  }
+}
+
+
+// Styling
+
+.icon--spaced-right {
+  margin-right: 0.5em;
+}
+
+.icon--spaced-left {
+  margin-left: 0.5em;
+}
+
+
+// Social
+
+.icon-facebook {
+  fill: $facebook-color;
+}
+
+.icon-twitter {
+  fill: $twitter-color;
+}

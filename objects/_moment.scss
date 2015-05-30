@@ -1,0 +1,129 @@
+/**
+* Object
+* MOMENTS
+*/
+
+.moment {
+  display: block;
+
+  text-decoration: none;
+}
+  .moment__picture {
+    position: relative;
+  }
+    .moment__picture-icon {
+      position: absolute;
+      top: $quarter-spacing-unit;
+      right: $quarter-spacing-unit;
+
+      fill: $white;
+
+      .is-mobile & {
+        top: $half-spacing-unit;
+        right: $half-spacing-unit;
+      }
+    }
+  .moment__img {
+    display: block;
+  }
+
+  // Mobile only
+  .is-mobile {
+    .moment {
+      border: 1px solid $gray;
+    }
+
+    .moment__share {
+      margin: $base-spacing-unit -#{$base-spacing-unit} -#{$base-spacing-unit} -#{$base-spacing-unit};
+      padding: $base-spacing-unit;
+
+      border-top: 1px solid $gray;
+    }
+  }
+
+
+// Polaroid
+
+.moment--polaroid {
+  vertical-align: top;
+
+  background-color: $brand-color;
+
+  &,
+  &:link,
+  &:visited {
+    color: white;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $white;
+    color: $brand-color;
+  }
+
+  .moment__caption {
+    height: 50px;
+
+    @include font-size(13px);
+    text-align: center;
+  }
+}
+
+
+// Inline
+
+.moment--inline,
+.moment--inline:link {
+  height: 58px;
+
+  @include font-size(16px);
+
+  background-color: $gray-light;
+
+  .single-moment & {
+    background-color: $gray-darker;
+    @include font-size(14px);
+
+    &,
+    &:link,
+    &:visited {
+      color: $white;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $gray-dark;
+    }
+  }
+
+  &,
+  &:link,
+  &:visited {
+    color: $black;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white;
+
+    background-color: $brand-color;
+
+    .moment__rank {
+      background-color: $brand-faded;
+    }
+  }
+
+  .moment__caption {}
+
+  .moment__rank {
+    width: 58px;
+
+    @include font-size(28px);
+    text-align: center;
+
+    background-color: $gray-lighter;
+  }
+}

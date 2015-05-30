@@ -1,0 +1,33 @@
+/**
+ * Object
+ * ACCORDION
+ */
+
+.accordion {}
+
+.panel {}
+
+  .panel__title > a {
+    display: block;
+    padding: $base-spacing-unit $double-spacing-unit $base-spacing-unit $base-spacing-unit;
+
+    position: relative;
+
+    color: white;
+
+    background-color: $link-color;
+
+    .icon {
+      position: absolute;
+      top: 50%;
+      right: $half-spacing-unit;
+      margin-top: -14px;
+
+      fill: white;
+      @include rotate(90deg);
+    }
+
+    &.collapsed .icon {
+      @include rotate(0deg);
+    }
+  }

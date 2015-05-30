@@ -1,0 +1,70 @@
+/**
+ * Base
+ * TYPE
+ */
+
+html {
+  color: $text-color;
+  font-size: $base-font-size;
+  font-family: $font-family;
+  line-height: $base-line-height;
+
+  // Disable browser font zoom on some devices
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+
+// Override UEFA defaults
+body {
+  font-size: 100%;
+  line-height: $base-line-height;
+}
+
+.site-header,
+.site-footer {
+  font-size: 11px;
+}
+
+
+// Text
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0.75em 0 1.25em;
+
+  font-weight: normal;
+}
+
+h1 { @include font-size(36px); }
+h2 { @include font-size(24px); }
+h3 { @include font-size(20px); }
+h4 { @include font-size(18px); }
+h5 { @include font-size(16px); }
+h6 { @include font-size(14px); }
+
+
+p {
+  margin: 1em 0;
+}
+
+// Use a class due to UEFA reset
+// Can’t define globally without breaking UEFA header/footer
+// Or introducing precedence
+.ul {
+  padding-left: $base-spacing-unit;
+  list-style: disc;
+}
+
+
+// Links
+
+a,
+a:link,
+a:hover,
+a:active,
+a:visited {
+  color: $link-color;
+
+  .site-footer & {
+    color: #404040;
+  }
+}

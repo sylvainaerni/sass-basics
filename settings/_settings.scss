@@ -1,0 +1,60 @@
+/**
+ * SETTINGS
+ */
+
+// Colors
+
+$brand-color:     #1C3460;
+$brand-faded:     #5F718E;
+
+$white:           #FAFDFF;
+$gray-lighter:    #F3F3F3;
+$gray-light:      #EBEBEB;
+$gray:            #CECECE;
+$gray-dark:       #9B9B9B;
+$gray-darker:     #4C4C4C;
+$black:           #262626;
+
+$text-color:      $black;
+$link-color:      #038ED4;
+
+$facebook-color:  #3B5999;
+$twitter-color:   #55ACEE;
+$google-color:    #CA523B;
+$windows-color:   #009AD8;
+$yahoo-color:     #4A0088;
+
+$error-color:     #FF313A;
+
+
+// Responsive
+
+$breakpoint:    500px;
+
+
+// Spacings
+
+$base-spacing-unit:       20px;
+
+$quarter-spacing-unit:    $base-spacing-unit / 4;
+$half-spacing-unit:       $base-spacing-unit / 2;
+$double-spacing-unit:     $base-spacing-unit * 2;
+$quadruple-spacing-unit:  $base-spacing-unit * 4;
+$sixteen-spacing-unit:    $base-spacing-unit * 16;
+
+
+// Type
+
+$base-font-size:    14px;
+$base-line-height:  1.4;
+
+$font-family:       Arial, sans-serif;
+
+
+/**
+ * Vendors config
+ */
+
+// Grid
+
+$gutter: $base-spacing-unit;

@@ -1,0 +1,32 @@
+/**
+ * Object
+ * AS TABLE
+ */
+
+// Make an element behave like a table
+// Usually used to vertically align in the middle
+.as-table,
+%as-table {
+  display: table;
+  width: 100%;
+}
+
+// All cells get an equal width
+.as-table--fixed {
+  table-layout: fixed;
+}
+
+  // Only required if you do multiple lines
+  .as-table__row {
+    display: table-row;
+  }
+
+  .as-table__cell,
+  %as-table__cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .as-table__cell--shrinked {
+    width: 1px;
+  }

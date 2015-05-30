@@ -1,0 +1,62 @@
+/**
+* Object
+* SLIDESHOW
+*/
+
+.slideshow {
+  width: 840px;
+  margin: 0 10px;
+  height: 130px;
+  overflow: hidden;
+
+  position: relative;
+}
+
+.slideshow__inner {
+  width: 100000px;
+  position: absolute;
+}
+
+.slideshow__item {
+  width: 160px;
+}
+
+.slideshow__button {
+  display: block;
+  padding: 7px 9px;
+
+  .ie8 & {
+    width: 40px;
+    height: 40px;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .ie8 &.previous {
+    background-image: url('../../images/arrow-left-off.png');
+
+    &:hover {
+      background-image: url('../../images/arrow-left-on.png');
+    }
+  }
+  .ie8 &.next {
+    background-image: url('../../images/arrow-right-off.png');
+
+    &:hover {
+      background-image: url('../../images/arrow-right-on.png');
+    }
+  }
+
+  .icon {
+    fill: $brand-color;
+  }
+
+  &:hover {
+    background-color: $brand-color;
+
+    .icon {
+      fill: white;
+    }
+  }
+}

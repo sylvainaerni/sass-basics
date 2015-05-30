@@ -1,0 +1,35 @@
+/**
+ * Object
+ * MEDIA
+ *
+ * The famous media object
+ * http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+ */
+
+.media {
+  @extend %clearfix;
+  display: block;
+}
+
+  .media__left {
+    float: left;
+    max-width: 50%;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .media__right {
+    float: right;
+    max-width: 50%;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .media__body {
+    overflow: hidden;
+    display: block;
+  }

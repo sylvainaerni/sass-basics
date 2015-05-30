@@ -1,0 +1,27 @@
+/**
+* Object
+* NOTIFICATION
+*/
+
+.notification {}
+
+.notification-body {
+  height: 100%;
+}
+
+.notification__icon {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  padding: 15px;
+
+  background-color: white;
+
+  .icon {
+    fill: $brand-color;
+  }
+}
+
+.notification__status {}
+
+.notification__message {}

@@ -1,0 +1,24 @@
+/**
+ * Object
+ * WIN
+ */
+
+.win {
+  .ul {
+    font-weight: bold;
+  }
+}
+
+  .win__body {
+    padding: 30px;
+  }
+
+  .win__title {
+    @include font-size(32px);
+    line-height: 1;
+    letter-spacing: -1px;
+
+    strong {
+      @include font-size(44px);
+    }
+  }

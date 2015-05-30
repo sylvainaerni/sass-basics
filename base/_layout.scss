@@ -1,0 +1,95 @@
+/**
+ * Base
+ * LAYOUT
+ */
+
+body {
+  background-color: white;
+
+  .is-desktop & {
+    background: url('../../images/bg-pattern.jpg') repeat-x 50% 96px;
+  }
+}
+
+.is-desktop .master {
+  background: url('../../images/bg.jpg') no-repeat 50% 96px;
+}
+
+.wrapper {
+  margin: 0 auto;
+
+  .is-desktop & {
+    width: 1022px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.site-header h1 {
+  margin: 0;
+}
+
+.site-wrapper,
+.site-wrapper * {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.top-moments {
+  padding: 30px;
+}
+
+.top-moments-list {
+  width: 528px;
+}
+
+.single-moment {}
+  .single-moment__video {
+    width: 572px;
+  }
+  .single-moment__aside {
+    width: 308px;
+  }
+
+.static-page {
+  border-top: 10px solid $brand-color;
+
+  .is-mobile & {
+    border-top-width: 1px;
+    border-top-color: $gray-light;
+  }
+}
+
+.page-prizes {}
+  .page-prizes__body {
+    width: 590px;
+  }
+  .page-prizes__aside {
+    width: 300px;
+  }
+
+  .page-prizes__header {
+    height: 364px;
+
+    color: white;
+
+    background: $brand-color url('../../images/pages/prizes/masterhead.jpg') top center;
+  }
+
+
+// Globals
+
+img {
+  display: block;
+}
+
+.is-mobile .site-wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  display: block;
+  border: 0;
+}
